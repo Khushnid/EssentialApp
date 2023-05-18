@@ -11,7 +11,7 @@ import EssentialFeed
 class FeedLoaderWithFallbackComposite: FeedLoader {
     let primary: FeedLoader
     let fallback: FeedLoader
-
+    
     init(primary: FeedLoader, fallback: FeedLoader) {
         self.primary = primary
         self.fallback = fallback
@@ -23,13 +23,11 @@ class FeedLoaderWithFallbackComposite: FeedLoader {
 }
 
 class FeedLoaderWithFallbackCompositeTests: XCTestCase {
-
+    
     func test_load_deliversPrimaryFeedOnPrimaryLoaderSuccess() {
         let primaryFeed = uniqueFeed()
         let fallbackFeed = uniqueFeed()
-        let primaryLoader = LoaderStub(result: .success(primaryFeed))
-        let fallbackLoader = LoaderStub(result: .success(fallbackFeed))
-        let sut = FeedLoaderWithFallbackComposite(primary: primaryLoader, fallback: fallbackLoader)
+        let sut = makeSUT(primaryResult: .success(primaryFeed), fallbackResult: .success(fallbackFeed))
         
         let exp = expectation(description: "Wait for load completion")
         sut.load { result in
@@ -45,6 +43,24 @@ class FeedLoaderWithFallbackCompositeTests: XCTestCase {
         }
         
         wait(for: [exp], timeout: 1.0)
+    }
+    
+    private func makeSUT(primaryResult: LoadFeedResult, fallbackResult: LoadFeedResult, file: StaticString = #file, line: UInt = #line) -> FeedLoader {
+        let primaryLoader = LoaderStub(result: primaryResult)
+        let fallbackLoader = LoaderStub(result: fallbackResult)
+        let sut = FeedLoaderWithFallbackComposite(primary: primaryLoader, fallback: fallbackLoader)
+        trackForMemoryLeaks(for: primaryLoader, fallbackLoader, sut, file: file, line: line)
+        return sut
+    }
+    
+    private func trackForMemoryLeaks(for instances: AnyObject...,
+                                     file: StaticString = #filePath,
+                                     line: UInt = #line) {
+        for instance in instances {
+            addTeardownBlock { [weak instance] in
+                XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak", file: file, line: line)
+            }
+        }
     }
     
     private func uniqueFeed() -> [FeedImage] {
