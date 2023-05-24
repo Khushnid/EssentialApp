@@ -31,7 +31,7 @@ class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
             switch result {
             case .success:
                 completion(result)
-
+                
             case .failure:
                 task.wrapped = self?.fallback.loadImageData(from: url, completion: completion)
             }
@@ -105,14 +105,23 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
     }
     
     func test_loadImageData_deliversFallbackDataOnFallbackLoaderSuccess() {
-         let fallbackData = anyData()
-         let (sut, primaryLoader, fallbackLoader) = makeSUT()
-
-         expect(sut, toCompleteWith: .success(fallbackData), when: {
-             primaryLoader.complete(with: anyNSError())
-             fallbackLoader.complete(with: fallbackData)
-         })
-     }
+        let fallbackData = anyData()
+        let (sut, primaryLoader, fallbackLoader) = makeSUT()
+        
+        expect(sut, toCompleteWith: .success(fallbackData), when: {
+            primaryLoader.complete(with: anyNSError())
+            fallbackLoader.complete(with: fallbackData)
+        })
+    }
+    
+    func test_loadImageData_deliversErrorOnBothPrimaryAndFallbackLoaderFailure() {
+        let (sut, primaryLoader, fallbackLoader) = makeSUT()
+        
+        expect(sut, toCompleteWith: .failure(anyNSError()), when: {
+            primaryLoader.complete(with: anyNSError())
+            fallbackLoader.complete(with: anyNSError())
+        })
+    }
     
     // MARK: - Helpers
     
@@ -126,22 +135,22 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
     
     private func expect(_ sut: FeedImageDataLoader, toCompleteWith expectedResult: FeedImageDataLoader.Result, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
         let exp = expectation(description: "Wait for load completion")
-
+        
         _ = sut.loadImageData(from: anyURL()) { receivedResult in
             switch (receivedResult, expectedResult) {
             case let (.success(receivedFeed), .success(expectedFeed)):
                 XCTAssertEqual(receivedFeed, expectedFeed, file: file, line: line)
-
+                
             case (.failure, .failure):
                 break
-
+                
             default:
                 XCTFail("Expected \(expectedResult), got \(receivedResult) instead", file: file, line: line)
             }
-
+            
             exp.fulfill()
         }
-
+        
         action()
         wait(for: [exp], timeout: 1.0)
     }
@@ -173,7 +182,7 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
         
         func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
             messages.append((url, completion))
-           
+            
             return Task { [weak self] in
                 self?.cancelledURLs.append(url)
             }
