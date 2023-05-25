@@ -152,5 +152,4 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
             messages[index].completion(.success(data))
         }
     }
-    
 }
