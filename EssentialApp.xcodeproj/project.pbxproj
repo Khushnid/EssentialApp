@@ -29,6 +29,7 @@
 		E2B5649F2A14E3A400593C48 /* EssentialAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5649E2A14E3A400593C48 /* EssentialAppTests.swift */; };
 		E2B564A92A14E3A400593C48 /* EssentialAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B564A82A14E3A400593C48 /* EssentialAppUITests.swift */; };
 		E2B564AB2A14E3A400593C48 /* EssentialAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B564AA2A14E3A400593C48 /* EssentialAppUITestsLaunchTests.swift */; };
+		E2D4F7192A208D0600242D19 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D4F7182A208D0600242D19 /* FeedLoaderCacheDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		E2B564A42A14E3A400593C48 /* EssentialAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B564A82A14E3A400593C48 /* EssentialAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUITests.swift; sourceTree = "<group>"; };
 		E2B564AA2A14E3A400593C48 /* EssentialAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E2D4F7182A208D0600242D19 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				E2B564952A14E3A300593C48 /* Info.plist */,
 				E2044D8A2A164AE7002B7E34 /* FeedLoaderWithFallbackComposite.swift */,
 				E2AE12CC2A1E3D6B0067F55A /* FeedImageDataLoaderWithFallbackComposite.swift */,
+				E2D4F7182A208D0600242D19 /* FeedLoaderCacheDecorator.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				E2B5648C2A14E3A200593C48 /* ViewController.swift in Sources */,
 				E2B564882A14E3A200593C48 /* AppDelegate.swift in Sources */,
 				E2044D8B2A164AE7002B7E34 /* FeedLoaderWithFallbackComposite.swift in Sources */,
+				E2D4F7192A208D0600242D19 /* FeedLoaderCacheDecorator.swift in Sources */,
 				E2B5648A2A14E3A200593C48 /* SceneDelegate.swift in Sources */,
 				E2AE12CD2A1E3D6B0067F55A /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 			);
