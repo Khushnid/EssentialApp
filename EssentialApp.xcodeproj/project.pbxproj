@@ -29,7 +29,6 @@
 		E2B5649F2A14E3A400593C48 /* EssentialAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5649E2A14E3A400593C48 /* EssentialAppTests.swift */; };
 		E2D4F7192A208D0600242D19 /* FeedLoaderCacheDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D4F7182A208D0600242D19 /* FeedLoaderCacheDecorator.swift */; };
 		E2D4F7212A20935500242D19 /* EssentialAppUIAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D4F7202A20935500242D19 /* EssentialAppUIAcceptanceTests.swift */; };
-		E2D4F7232A20935500242D19 /* EssentialAppUIAcceptanceTestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D4F7222A20935500242D19 /* EssentialAppUIAcceptanceTestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +88,6 @@
 		E2D4F7182A208D0600242D19 /* FeedLoaderCacheDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecorator.swift; sourceTree = "<group>"; };
 		E2D4F71E2A20935500242D19 /* EssentialAppUIAcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppUIAcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D4F7202A20935500242D19 /* EssentialAppUIAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTests.swift; sourceTree = "<group>"; };
-		E2D4F7222A20935500242D19 /* EssentialAppUIAcceptanceTestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppUIAcceptanceTestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				E2D4F7202A20935500242D19 /* EssentialAppUIAcceptanceTests.swift */,
-				E2D4F7222A20935500242D19 /* EssentialAppUIAcceptanceTestsLaunchTests.swift */,
 			);
 			path = EssentialAppUIAcceptanceTests;
 			sourceTree = "<group>";
@@ -358,7 +355,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2D4F7232A20935500242D19 /* EssentialAppUIAcceptanceTestsLaunchTests.swift in Sources */,
 				E2D4F7212A20935500242D19 /* EssentialAppUIAcceptanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
