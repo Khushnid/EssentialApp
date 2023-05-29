@@ -16,6 +16,8 @@
 		E2044D8D2A173D4D002B7E34 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2044D8C2A173D4D002B7E34 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */; };
 		E2044D902A174403002B7E34 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2044D8F2A174403002B7E34 /* XCTestCase+MemoryLeakTracking.swift */; };
 		E217C9E42A24841D00383830 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217C9E32A24841D00383830 /* FeedImageDataLoaderCacheDecoratorTests.swift */; };
+		E217C9E62A24857F00383830 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217C9E52A24857F00383830 /* FeedImageDataLoaderSpy.swift */; };
+		E217C9E82A24861000383830 /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217C9E72A24861000383830 /* XCTestCase+FeedImageDataLoader.swift */; };
 		E2AE12CD2A1E3D6B0067F55A /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE12CC2A1E3D6B0067F55A /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 		E2AE12CF2A1E3F070067F55A /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE12CE2A1E3F070067F55A /* SharedTestHelpers.swift */; };
 		E2AE12D12A1F2E590067F55A /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AE12D02A1F2E590067F55A /* FeedLoaderCacheDecoratorTests.swift */; };
@@ -72,6 +74,8 @@
 		E2044D8C2A173D4D002B7E34 /* FeedImageDataLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
 		E2044D8F2A174403002B7E34 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		E217C9E32A24841D00383830 /* FeedImageDataLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
+		E217C9E52A24857F00383830 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
+		E217C9E72A24861000383830 /* XCTestCase+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 		E2AE12CC2A1E3D6B0067F55A /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		E2AE12CE2A1E3F070067F55A /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		E2AE12D02A1F2E590067F55A /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				E2AE12DC2A1F7AB30067F55A /* XCTestCase+FeedLoader.swift */,
 				E2AE12CE2A1E3F070067F55A /* SharedTestHelpers.swift */,
 				E2AE12DA2A1F72840067F55A /* FeedLoaderStub.swift */,
+				E217C9E52A24857F00383830 /* FeedImageDataLoaderSpy.swift */,
+				E217C9E72A24861000383830 /* XCTestCase+FeedImageDataLoader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -350,8 +356,10 @@
 				E217C9E42A24841D00383830 /* FeedImageDataLoaderCacheDecoratorTests.swift in Sources */,
 				E2AE12CF2A1E3F070067F55A /* SharedTestHelpers.swift in Sources */,
 				E2044D902A174403002B7E34 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+				E217C9E62A24857F00383830 /* FeedImageDataLoaderSpy.swift in Sources */,
 				E2044D8D2A173D4D002B7E34 /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				E2AE12D12A1F2E590067F55A /* FeedLoaderCacheDecoratorTests.swift in Sources */,
+				E217C9E82A24861000383830 /* XCTestCase+FeedImageDataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
