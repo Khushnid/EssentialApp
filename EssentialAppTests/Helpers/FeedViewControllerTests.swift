@@ -400,7 +400,7 @@ final class FeedUIIntegrationTests: XCTestCase {
     }
 }
 
-private extension FeedViewController {
+extension FeedViewController {
     func simulateUserInitiatedFeedReload() {
         refreshControl?.simulatedPullToRefresh()
     }
@@ -437,6 +437,10 @@ private extension FeedViewController {
         let ds = tableView.prefetchDataSource
         let index = IndexPath(row: row, section: feedImagesSection)
         ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
+    }
+    
+    func renderedFeedImageData(at index: Int) -> Data? {
+        return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
     
     var isShowingLoadingIndicator: Bool {
@@ -488,7 +492,7 @@ private extension FeedImageCell {
     }
 }
 
-private extension UIImage {
+extension UIImage {
     static func make(withColor color: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         let format = UIGraphicsImageRendererFormat()
