@@ -89,10 +89,11 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2C33DBC29B9B4A200F7C573"
+               BlueprintIdentifier = "E23222DA2A28785300F96E99"
                BuildableName = "EssentialFeediOSTests.xctest"
                BlueprintName = "EssentialFeediOSTests"
                ReferencedContainer = "container:EssentialFeed/EssentialFeed.xcodeproj">
