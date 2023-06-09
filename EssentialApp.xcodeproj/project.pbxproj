@@ -40,7 +40,6 @@
 		E2B5649F2A14E3A400593C48 /* EssentialAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B5649E2A14E3A400593C48 /* EssentialAppTests.swift */; };
 		E2B6451C2A2A1D220084874B /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6451B2A2A1D220084874B /* UIView+TestHelpers.swift */; };
 		E2B6451E2A2E0FE80084874B /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6451D2A2E0FE80084874B /* MainQueueDispatchDecorator.swift */; };
-		E2F79B602A33354000D90318 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F79B5F2A33354000D90318 /* CombineHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +102,6 @@
 		E2B5649E2A14E3A400593C48 /* EssentialAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialAppTests.swift; sourceTree = "<group>"; };
 		E2B6451B2A2A1D220084874B /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
 		E2B6451D2A2E0FE80084874B /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
-		E2F79B5F2A33354000D90318 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,7 +187,6 @@
 				E2B564922A14E3A300593C48 /* LaunchScreen.storyboard */,
 				E2B564952A14E3A300593C48 /* Info.plist */,
 				E2AE12CC2A1E3D6B0067F55A /* FeedImageDataLoaderWithFallbackComposite.swift */,
-				E2F79B5F2A33354000D90318 /* CombineHelpers.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -313,7 +310,6 @@
 				E2718D572A25FADF00EE9F5A /* FeedUIComposer.swift in Sources */,
 				E2718D592A25FADF00EE9F5A /* WeakRefVirtualProxy.swift in Sources */,
 				E2B564882A14E3A200593C48 /* AppDelegate.swift in Sources */,
-				E2F79B602A33354000D90318 /* CombineHelpers.swift in Sources */,
 				E2B5648A2A14E3A200593C48 /* SceneDelegate.swift in Sources */,
 				E2718D5C2A25FADF00EE9F5A /* FeedLoaderPresentationAdapter.swift in Sources */,
 				E2B6451E2A2E0FE80084874B /* MainQueueDispatchDecorator.swift in Sources */,
