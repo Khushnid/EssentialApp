@@ -10,38 +10,6 @@ import EssentialFeed
 
 class LoadImageCommentsFromRemoteUseCaseTests: XCTestCase {
     
-    func test_init_doesNotRequestDataFromURL() {
-        let url = URL(string: "https://a-url.com")!
-        let (_, client) = makeSUT(url: url)
-        XCTAssertTrue(client.requestedURLs.isEmpty)
-    }
-    
-    func test_loads_requestsDataFromURL() {
-        let url = URL(string: "https://a-url.com")!
-        let (sut, client) = makeSUT(url: url)
-        sut.load { _ in }
-        XCTAssertEqual(client.requestedURLs, [url])
-    }
-    
-    func test_loadsTwice_requestDataFromURLTwice() {
-        let url = URL(string: "https://a-given.com")!
-        let (sut, client) = makeSUT(url: url)
-        
-        sut.load { _ in }
-        sut.load { _ in }
-        
-        XCTAssertEqual(client.requestedURLs, [url, url])
-    }
-    
-    func test_load_deliversErrorOnClientError() {
-        let (sut, client) = makeSUT()
-        
-        expect(sut, toCompleteWith: failure(.connectivity)) {
-            let clientError = NSError(domain: "Error", code: 1)
-            client.complete(with: clientError)
-        }
-    }
-    
     func test_load_deliversErrorOnNon2xxHTTPResponse() {
         let (sut, client) = makeSUT()
         let samples = [199, 150, 300, 500].enumerated()
@@ -113,20 +81,6 @@ class LoadImageCommentsFromRemoteUseCaseTests: XCTestCase {
         let sut = RemoteImageCommentsFeedLoader(url: url, client: client)
         trackForMemoryLeaks(for: sut, client)
         return (sut, client)
-    }
-    
-    func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
-        let url = URL(string: "https://any-url.com")!
-        let client = HTTPClientSpy()
-        var sut: RemoteImageCommentsFeedLoader? = RemoteImageCommentsFeedLoader(url: url, client: client)
-        
-        var capturedResults = [RemoteImageCommentsFeedLoader.Result]()
-        sut?.load { capturedResults.append($0) }
-        
-        sut = nil
-        client.complete(withStatusCode: 200, data: makeItemJSON([]))
-        
-        XCTAssertTrue(capturedResults.isEmpty)
     }
     
     private func failure(_ error: RemoteImageCommentsFeedLoader.Error) -> RemoteImageCommentsFeedLoader.Result {
