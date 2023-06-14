@@ -87,7 +87,7 @@ class EssentialFeedEndToEndTests: XCTestCase {
                                line: UInt = #line) -> LoadFeedResult? {
         var recievedResult: LoadFeedResult?
         
-        let loader = RemoteFeedLoader(url: feedTestServerURL, client: ephemeralClient())
+        let loader = RemoteLoader(url: feedTestServerURL, client: ephemeralClient(), mapper: FeedItemsMapper.map)
         let exp = expectation(description: "Waiting for load completion")
         
         loader.load { result in

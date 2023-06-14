@@ -409,7 +409,7 @@ final class FeedUIIntegrationTests: XCTestCase {
         }
         
         func completeImageLoadingWithError(at index: Int = 0) {
-            let error = NSError(domain: "an geror", code: 0)
+            let error = NSError(domain: "an error", code: 0)
             imageRequests[index].completion(.failure(error))
         }
     }

@@ -41,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func configureWindow() {
         let remoteUrl = URL(string: "https://ile-api.essentialdeveloper.com/essential-feed/v1/feed")!
         
-        let remoteFeedLoader = RemoteFeedLoader(url: remoteUrl, client: httpClient)
+        let remoteFeedLoader = RemoteLoader(url: remoteUrl, client: httpClient, mapper: FeedItemsMapper.map)
         let remoteImageLoader = RemoteFeedImageDataLoader(client: httpClient)
         
         let localImageLoader = LocalFeedImageDataLoader(store: store)
