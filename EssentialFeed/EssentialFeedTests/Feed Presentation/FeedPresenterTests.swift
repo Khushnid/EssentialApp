@@ -72,7 +72,7 @@ class FeedPresenterTests: XCTestCase {
         return value
     }
 
-    private class ViewSpy: FeedView, FeedErrorView, FeedLoadingView {
+    private class ViewSpy: FeedView, FeedErrorView, ResourceLoadingView {
         private(set) var messages = Set<Message>()
 
         func display(_ viewModel: FeedViewModel) {
@@ -83,7 +83,7 @@ class FeedPresenterTests: XCTestCase {
             messages.insert(.display(errorMessage: viewModel.message))
         }
         
-        func display(_ viewModel: FeedLoadingViewModel) {
+        func display(_ viewModel: ResourceLoadingViewModel) {
             messages.insert (.display(isLoading: viewModel.isLoading))
         }
         

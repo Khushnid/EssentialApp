@@ -77,8 +77,8 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
 }
 
-extension FeedViewController: FeedLoadingView, FeedErrorView {
-    public func display(_ viewModel: FeedLoadingViewModel) {
+extension FeedViewController: ResourceLoadingView, FeedErrorView {
+    public func display(_ viewModel: ResourceLoadingViewModel) {
         refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
     
