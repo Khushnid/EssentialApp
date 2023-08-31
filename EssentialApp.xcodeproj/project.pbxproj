@@ -19,7 +19,7 @@
 		E2718D582A25FADF00EE9F5A /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D562A25FADF00EE9F5A /* FeedViewAdapter.swift */; };
 		E2718D592A25FADF00EE9F5A /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D542A25FADF00EE9F5A /* WeakRefVirtualProxy.swift */; };
 		E2718D5A2A25FADF00EE9F5A /* FeedImageDataLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D552A25FADF00EE9F5A /* FeedImageDataLoaderPresentationAdapter.swift */; };
-		E2718D5C2A25FADF00EE9F5A /* FeedLoaderPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D512A25FADE00EE9F5A /* FeedLoaderPresentationAdapter.swift */; };
+		E2718D5C2A25FADF00EE9F5A /* LoadResourcePresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D512A25FADE00EE9F5A /* LoadResourcePresentationAdapter.swift */; };
 		E2718D5E2A25FB3C00EE9F5A /* FeedViewController+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D5D2A25FB3C00EE9F5A /* FeedViewController+Localization.swift */; };
 		E2718D642A25FC4500EE9F5A /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D632A25FC4500EE9F5A /* FeedViewControllerTests.swift */; };
 		E2718D662A26031D00EE9F5A /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D652A26031D00EE9F5A /* FeedAcceptanceTests.swift */; };
@@ -72,7 +72,7 @@
 		E217C9E52A24857F00383830 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
 		E217C9E72A24861000383830 /* XCTestCase+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 		E2718D4F2A25D3E800EE9F5A /* SceneDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTests.swift; sourceTree = "<group>"; };
-		E2718D512A25FADE00EE9F5A /* FeedLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
+		E2718D512A25FADE00EE9F5A /* LoadResourcePresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresentationAdapter.swift; sourceTree = "<group>"; };
 		E2718D522A25FADE00EE9F5A /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
 		E2718D542A25FADF00EE9F5A /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		E2718D552A25FADF00EE9F5A /* FeedImageDataLoaderPresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderPresentationAdapter.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 				E2718D522A25FADE00EE9F5A /* FeedUIComposer.swift */,
 				E2718D542A25FADF00EE9F5A /* WeakRefVirtualProxy.swift */,
 				E2718D552A25FADF00EE9F5A /* FeedImageDataLoaderPresentationAdapter.swift */,
-				E2718D512A25FADE00EE9F5A /* FeedLoaderPresentationAdapter.swift */,
+				E2718D512A25FADE00EE9F5A /* LoadResourcePresentationAdapter.swift */,
 				E2718D562A25FADF00EE9F5A /* FeedViewAdapter.swift */,
 				E2B564892A14E3A200593C48 /* SceneDelegate.swift */,
 				E2B024D82A97B50C007E5417 /* CombineHelpers.swift */,
@@ -306,7 +306,7 @@
 				E2718D592A25FADF00EE9F5A /* WeakRefVirtualProxy.swift in Sources */,
 				E2B564882A14E3A200593C48 /* AppDelegate.swift in Sources */,
 				E2B5648A2A14E3A200593C48 /* SceneDelegate.swift in Sources */,
-				E2718D5C2A25FADF00EE9F5A /* FeedLoaderPresentationAdapter.swift in Sources */,
+				E2718D5C2A25FADF00EE9F5A /* LoadResourcePresentationAdapter.swift in Sources */,
 				E2718D582A25FADF00EE9F5A /* FeedViewAdapter.swift in Sources */,
 				E2718D5A2A25FADF00EE9F5A /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 			);
