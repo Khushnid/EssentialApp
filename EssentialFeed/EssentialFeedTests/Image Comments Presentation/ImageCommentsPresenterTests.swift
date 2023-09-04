@@ -13,6 +13,49 @@ class ImageCommentsPresenterTests: XCTestCase {
         XCTAssertEqual(ImageCommentsPresenter.title, localized("IMAGE_COMMENTS_VIEW_TITLE"))
     }
     
+    func test_map_createsViewModels() {
+        let now = Date()
+        let calendar = Calendar(identifier: .gregorian)
+        let locale = Locale(identifier: "en_US_POSIX")
+        
+        let comments = [
+            ImageComment(
+                id: UUID(),
+                message: "A message",
+                createdAt: now.adding(minutes: -5),
+                username: "A Username"
+            ),
+           
+            ImageComment(
+                id: UUID(),
+                message: "Another message",
+                createdAt: now.adding(days: -1),
+                username: "Another Username"
+            )
+        ]
+        
+        let viewModel = ImageCommentsPresenter.map(
+            comments: comments,
+            currentDate: now,
+            calendar: calendar,
+            locale: locale
+        )
+        
+        XCTAssertEqual(viewModel.comments, [
+            ImageCommentViewModel(
+                message: "A message",
+                date: "5 minutes ago",
+                username: "A Username"
+            ),
+            
+            ImageCommentViewModel(
+                message: "Another message",
+                date: "1 day ago",
+                username: "Another Username"
+            ),
+        ])
+    }
+     
     // MARK: - Helpers
     private func localized(_ key: String, file: StaticString = #file, line: UInt = #line) -> String {
         let table = "ImageComments"
