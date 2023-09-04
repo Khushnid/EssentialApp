@@ -22,14 +22,14 @@ class ImageCommentsPresenterTests: XCTestCase {
             ImageComment(
                 id: UUID(),
                 message: "A message",
-                createdAt: now.adding(minutes: -5),
+                createdAt: now.adding(minutes: -5, calendar: calendar),
                 username: "A Username"
             ),
            
             ImageComment(
                 id: UUID(),
                 message: "Another message",
-                createdAt: now.adding(days: -1),
+                createdAt: now.adding(days: -1, calendar: calendar),
                 username: "Another Username"
             )
         ]
