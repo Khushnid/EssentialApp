@@ -73,7 +73,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     private func prefetchCell(forRowAt indexPath: IndexPath) {
-        cellController(forRowAt: indexPath).prelaod()
+        cellController(forRowAt: indexPath).preload()
     }
 }
 

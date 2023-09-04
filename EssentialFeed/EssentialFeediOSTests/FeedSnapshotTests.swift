@@ -11,7 +11,7 @@ import EssentialFeediOS
 @testable import EssentialFeed
 
 final class FeedSnapshotTests: XCTestCase {
-
+    
     func test_emptyFeed() {
         let sut = makeSUT()
         
@@ -47,7 +47,7 @@ final class FeedSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "FEED_WITH_FAILED_IMAGE_LOADING_light")
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "FEED_WITH_FAILED_IMAGE_LOADING_dark")
     }
-
+    
     private func makeSUT() -> FeedViewController {
         let bundle = Bundle(for: FeedViewController.self)
         let storyboard = UIStoryboard(name: "Feed", bundle: bundle)
@@ -97,7 +97,7 @@ final class FeedSnapshotTests: XCTestCase {
 private extension FeedViewController {
     func display(_ stubs: [ImageStub]) {
         let cells: [FeedImageCellController] = stubs.map { stub in
-            let cellController = FeedImageCellController(delegate: stub)
+            let cellController = FeedImageCellController(viewModel: stub.viewModel, delegate: stub)
             stub.controller = cellController
             return cellController
         }
@@ -108,20 +108,26 @@ private extension FeedViewController {
 
 private class ImageStub: FeedImageCellControllerDelegate {
     weak var controller: FeedImageCellController?
-    let viewModel: FeedImageViewModel<UIImage>
+    let viewModel: FeedImageViewModel
+    let image: UIImage?
     
     init(description: String?, location: String?, image: UIImage?) {
-        viewModel = FeedImageViewModel(
+        self.viewModel = FeedImageViewModel(
             description: description,
-            location: location,
-            image: image,
-            isLoading: false,
-            shouldRetry: image == nil
+            location: location
         )
+        
+        self.image = image
     }
     
     func didRequestImage() {
-        controller?.display(viewModel )
+        controller?.display(ResourceLoadingViewModel(isLoading: false))
+        if let image = image {
+            controller?.display(image)
+            controller?.display(ResourceErrorViewModel(message: .none))
+        } else {
+            controller?.display(ResourceErrorViewModel(message: "any"))
+        }
     }
     
     func didCancelImageRequest() {}
