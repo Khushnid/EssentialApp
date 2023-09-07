@@ -3,4 +3,83 @@
    uuid = "AA2F1FC1-3547-4264-B792-9CA5CEC278DA"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E11915F-76BE-483B-9E45-11A9C1192DDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EssentialFeed/EssentialFeedTests/Shared API infra/Helpers/XCTestCase+MemoryLeakDetector.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "trackForMemoryLeaks(for:file:line:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24DE5941-4BCD-4074-9CBF-3967A5706172"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EssentialAppTests/Helpers/FeedViewControllerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "508"
+            endingLineNumber = "508">
+            <Locations>
+               <Location
+                  uuid = "24DE5941-4BCD-4074-9CBF-3967A5706172 - 53527a2dee46d8d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.XCTestCase.trackForMemoryLeaks(for: Swift.AnyObject..., file: Swift.StaticString, line: Swift.UInt) -&gt; ()"
+                  moduleName = "EssentialAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/el.keldiyorovgmail.com/Developer/ED%20Related/EssentialApp/EssentialAppTests/Helpers/FeedViewControllerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "508"
+                  endingLineNumber = "508"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "24DE5941-4BCD-4074-9CBF-3967A5706172 - 53527a2dee46d8d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.XCTestCase.trackForMemoryLeaks(for: Swift.AnyObject..., file: Swift.StaticString, line: Swift.UInt) -&gt; ()"
+                  moduleName = "EssentialAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/el.keldiyorovgmail.com/Developer/ED%20Related/EssentialApp/EssentialAppTests/Helpers/FeedViewControllerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "508"
+                  endingLineNumber = "508"
+                  offsetFromSymbolStart = "579">
+               </Location>
+               <Location
+                  uuid = "24DE5941-4BCD-4074-9CBF-3967A5706172 - e9320f5b26a0a522"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in __C.XCTestCase.trackForMemoryLeaks(for: Swift.AnyObject..., file: Swift.StaticString, line: Swift.UInt) -&gt; ()"
+                  moduleName = "EssentialAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/el.keldiyorovgmail.com/Developer/ED%20Related/EssentialApp/EssentialAppTests/Helpers/FeedViewControllerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "508"
+                  endingLineNumber = "508"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
