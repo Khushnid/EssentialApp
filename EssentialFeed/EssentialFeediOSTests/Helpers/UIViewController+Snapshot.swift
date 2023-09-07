@@ -27,11 +27,10 @@ struct SnapshotConfiguration {
             traitCollection: UITraitCollection(traitsFrom: [
                 .init(forceTouchCapability: .available),
                 .init(layoutDirection: .leftToRight),
-                .init(preferredContentSizeCategory: .medium),
+                .init(preferredContentSizeCategory: contentSize),
                 .init(userInterfaceIdiom: .phone),
                 .init(horizontalSizeClass: .compact),
                 .init(verticalSizeClass: .regular),
-                .init(preferredContentSizeCategory: contentSize),
                 .init(displayScale: 2),
                 .init(displayGamut: .P3),
                 .init(userInterfaceStyle: style)

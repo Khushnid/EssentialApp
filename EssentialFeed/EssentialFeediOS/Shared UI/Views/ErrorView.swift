@@ -38,7 +38,8 @@ private extension ErrorView {
         titleLabel?.textColor = .white
         titleLabel?.textAlignment = .center
         titleLabel?.numberOfLines = 0
-        titleLabel?.font = .systemFont(ofSize: 17)
+        titleLabel?.font = .preferredFont(forTextStyle: .body)
+        titleLabel?.adjustsFontForContentSizeCategory = true
     }
         
     var isVisible: Bool { alpha > 0 }
