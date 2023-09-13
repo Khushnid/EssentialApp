@@ -18,7 +18,7 @@ class CommentsUIIntegrationTests: FeedUIIntegrationTests {
 
         sut.loadViewIfNeeded()
 
-        XCTAssertEqual(sut.title, feedTitle)
+        XCTAssertEqual(sut.title, commentsTitle)
     }
 
     override func test_loadFeedActions_requestFeedFromLoader() {
