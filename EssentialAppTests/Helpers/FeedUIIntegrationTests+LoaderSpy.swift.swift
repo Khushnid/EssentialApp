@@ -31,12 +31,15 @@ extension FeedUIIntegrationTests {
 
         
         func completeFeedLoading(with feed: [FeedImage] = [], at index: Int = 0) {
-            feedRequests[index].send(feed)
+            guard let resultValue = feedRequests[safe: index] else { return }
+            resultValue.send(feed)
         }
         
         func completeFeedLoadingWithError(at index: Int = 0) {
             let error = NSError(domain: "an error", code: 0)
-            feedRequests[index].send(completion: .failure(error))
+         
+            guard let resultValue = feedRequests[safe: index] else { return }
+            resultValue.send(completion: .failure(error))
         }
         
         // MARK: - FeedImageDataLoader

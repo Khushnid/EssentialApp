@@ -43,7 +43,7 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         snapshot.appendItems(cellControllers, toSection: 0)
         dataSource.apply(snapshot)
     }
-    
+
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let dl = cellController(at: indexPath)?.delegate
         dl?.tableView?(tableView, didSelectRowAt: indexPath)

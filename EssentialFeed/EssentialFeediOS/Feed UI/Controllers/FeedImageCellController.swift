@@ -40,8 +40,8 @@ extension FeedImageCellController: UITableViewDataSource, UITableViewDelegate, U
         cell?.descriptionLabel.text = viewModel.description
         cell?.feedImageView.image = nil
         cell?.onRetry = { [weak self] in
-             self?.delegate.didRequestImage()
-         }
+            self?.delegate.didRequestImage()
+        }
         delegate.didRequestImage()
         return cell!
     }
@@ -54,15 +54,24 @@ extension FeedImageCellController: UITableViewDataSource, UITableViewDelegate, U
         cancelLoad()
     }
     
+    public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        delegate.didRequestImage()
+    }
+    
     public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         cancelLoad()
     }
     
-    public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
-        delegate.didRequestImage()
+    private func cancelLoad() {
+        releaseCellForReuse()
+        delegate.didCancelImageRequest()
+    }
+    
+    private func releaseCellForReuse() {
+        cell = nil
     }
 }
-
+ 
 extension FeedImageCellController: ResourceView, ResourceLoadingView, ResourceErrorView {
     public func display(_ viewModel: UIImage) {
         cell?.feedImageView.setImageAnimated(viewModel)
@@ -74,16 +83,5 @@ extension FeedImageCellController: ResourceView, ResourceLoadingView, ResourceEr
     
     public func display(_ viewModel: ResourceErrorViewModel) {
         cell?.feedImageRetryButton.isHidden = viewModel.message == nil
-    }
-}
-
-private extension FeedImageCellController {
-    func releaseCellForReuse() {
-        cell = nil
-    }
-    
-    func cancelLoad() {
-        releaseCellForReuse()
-        delegate.didCancelImageRequest()
     }
 }
