@@ -11,10 +11,7 @@ import EssentialFeediOS
 import Combine
 
 extension FeedUIIntegrationTests {
-    func makeImage(description: String? = nil, location: String? = nil, url: URL = URL(string: "http://any-url.com")!) -> FeedImage {
-        return FeedImage(id: UUID(), description: description, location: location, url: url)
-    }
-    
+
     class LoaderSpy: FeedImageDataLoader {
         // MARK: - FeedLoader
         private var feedRequests = [PassthroughSubject<Paginated<FeedImage>, Error>]()
@@ -22,6 +19,8 @@ extension FeedUIIntegrationTests {
         var loadFeedCallCount: Int {
             return feedRequests.count
         }
+        
+        private(set) var loadMoreCallCount = 0
 
         func loadPublisher() -> AnyPublisher<Paginated<FeedImage>, Error> {
             let publisher = PassthroughSubject<Paginated<FeedImage>, Error>()
@@ -32,7 +31,9 @@ extension FeedUIIntegrationTests {
         
         func completeFeedLoading(with feed: [FeedImage] = [], at index: Int = 0) {
             guard let resultValue = feedRequests[safe: index] else { return }
-            resultValue.send(Paginated(items: feed))
+            resultValue.send(Paginated(items: feed, loadMore: { [weak self] _ in
+                self?.loadMoreCallCount += 1
+            }))
         }
         
         func completeFeedLoadingWithError(at index: Int = 0) {
