@@ -37,6 +37,7 @@
 		E2B564912A14E3A300593C48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2B564902A14E3A300593C48 /* Assets.xcassets */; };
 		E2B564942A14E3A300593C48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B564922A14E3A300593C48 /* LaunchScreen.storyboard */; };
 		E2B6451C2A2A1D220084874B /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B6451B2A2A1D220084874B /* UIView+TestHelpers.swift */; };
+		E2CC15682AD7FCBE00CF8DDE /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CC15672AD7FCBE00CF8DDE /* NullStore.swift */; };
 		E2EAC6E72AC9AC5F00D154CB /* ListViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EAC6E62AC9AC5F00D154CB /* ListViewController+TestHelpers.swift */; };
 		E2FB98BF2AD580E300AFD31B /* FeedImageCell+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FB98BE2AD580E300AFD31B /* FeedImageCell+Helpers.swift */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		E2B564952A14E3A300593C48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B5649A2A14E3A400593C48 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B6451B2A2A1D220084874B /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
+		E2CC15672AD7FCBE00CF8DDE /* NullStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
 		E2EAC6E62AC9AC5F00D154CB /* ListViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+TestHelpers.swift"; sourceTree = "<group>"; };
 		E2FB98BE2AD580E300AFD31B /* FeedImageCell+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +187,7 @@
 				E2B564902A14E3A300593C48 /* Assets.xcassets */,
 				E2B564922A14E3A300593C48 /* LaunchScreen.storyboard */,
 				E2B564952A14E3A300593C48 /* Info.plist */,
+				E2CC15672AD7FCBE00CF8DDE /* NullStore.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			files = (
 				E2B5648C2A14E3A200593C48 /* ViewController.swift in Sources */,
 				E2718D572A25FADF00EE9F5A /* FeedUIComposer.swift in Sources */,
+				E2CC15682AD7FCBE00CF8DDE /* NullStore.swift in Sources */,
 				E2B024D92A97B50C007E5417 /* CombineHelpers.swift in Sources */,
 				E2718D592A25FADF00EE9F5A /* WeakRefVirtualProxy.swift in Sources */,
 				E213F0432AB1D3CB00CAD9A1 /* CommentsUIComposer.swift in Sources */,
