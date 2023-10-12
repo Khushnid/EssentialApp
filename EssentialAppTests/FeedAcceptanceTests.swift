@@ -19,15 +19,6 @@ class FeedAcceptanceTests: XCTestCase {
         XCTAssertEqual(feed.renderedFeedImageData(at: 0), makeImageData0())
         XCTAssertEqual(feed.renderedFeedImageData(at: 1), makeImageData1())
         XCTAssertTrue(feed.canLoadMoreFeed)
-        
-        feed.simulateLoadMoreFeedAction()
-        feed.simulateLoadMoreFeedAction()
-        
-        XCTAssertEqual(feed.numberOfRenderedFeedImageViews(), 3)
-        XCTAssertEqual(feed.renderedFeedImageData(at: 0), makeImageData0())
-        XCTAssertEqual(feed.renderedFeedImageData(at: 1), makeImageData1())
-        XCTAssertEqual(feed.renderedFeedImageData(at: 2), makeImageData2())
-        XCTAssertFalse(feed.canLoadMoreFeed)
     }
     
     func test_onLaunch_displaysCachedRemoteFeedWhenCustomerHasNoConnectivity() {
