@@ -27,16 +27,15 @@ extension FeedUIIntegrationTests {
         }
         
         func completeFeedLoadingWithError(at index: Int = 0) {
-            guard let resultValue = feedRequests[safe: index] else { return }
-            resultValue.send(completion: .failure(anyNSError()))
+            feedRequests[index].send(completion: .failure(anyNSError()))
         }
 
         func completeFeedLoading(with feed: [FeedImage] = [], at index: Int = 0) {
-            guard let resultValue = feedRequests[safe: index] else { return }
-          
-            resultValue.send(Paginated(items: feed, loadMorePublisher: { [weak self] in
+            feedRequests[index].send(Paginated(items: feed, loadMorePublisher: { [weak self] in
                 self?.loadMorePublisher() ?? Empty().eraseToAnyPublisher()
             }))
+            
+            feedRequests[index].send(completion: .finished)
         }
         
         // MARK: - LoadMoreFeedLoader
@@ -58,12 +57,12 @@ extension FeedUIIntegrationTests {
                 items: feed,
                 loadMorePublisher: lastPage ? nil : { [weak self] in
                     self?.loadMorePublisher() ?? Empty().eraseToAnyPublisher()
-                }))
+                })
+            )
         }
         
         func completeLoadMoreWithError(at index: Int = 0) {
-            guard let resultValue = loadMoreRequests[safe: index] else { return }
-            resultValue.send(completion: .failure(anyNSError()))
+            loadMoreRequests[index].send(completion: .failure(anyNSError()))
         }
         
         // MARK: - FeedImageDataLoader
