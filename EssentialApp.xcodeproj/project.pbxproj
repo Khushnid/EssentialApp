@@ -14,8 +14,6 @@
 		E2044D902A174403002B7E34 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2044D8F2A174403002B7E34 /* XCTestCase+MemoryLeakTracking.swift */; };
 		E213F0412AB1D16800CAD9A1 /* CommentsUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E213F0402AB1D16800CAD9A1 /* CommentsUIIntegrationTests.swift */; };
 		E213F0432AB1D3CB00CAD9A1 /* CommentsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E213F0422AB1D3CB00CAD9A1 /* CommentsUIComposer.swift */; };
-		E217C9E62A24857F00383830 /* FeedImageDataLoaderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217C9E52A24857F00383830 /* FeedImageDataLoaderSpy.swift */; };
-		E217C9E82A24861000383830 /* XCTestCase+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217C9E72A24861000383830 /* XCTestCase+FeedImageDataLoader.swift */; };
 		E2718D502A25D3E800EE9F5A /* SceneDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D4F2A25D3E800EE9F5A /* SceneDelegateTests.swift */; };
 		E2718D572A25FADF00EE9F5A /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D522A25FADE00EE9F5A /* FeedUIComposer.swift */; };
 		E2718D582A25FADF00EE9F5A /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718D562A25FADF00EE9F5A /* FeedViewAdapter.swift */; };
@@ -73,8 +71,6 @@
 		E2044D8F2A174403002B7E34 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		E213F0402AB1D16800CAD9A1 /* CommentsUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIIntegrationTests.swift; sourceTree = "<group>"; };
 		E213F0422AB1D3CB00CAD9A1 /* CommentsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsUIComposer.swift; sourceTree = "<group>"; };
-		E217C9E52A24857F00383830 /* FeedImageDataLoaderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderSpy.swift; sourceTree = "<group>"; };
-		E217C9E72A24861000383830 /* XCTestCase+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
 		E2718D4F2A25D3E800EE9F5A /* SceneDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTests.swift; sourceTree = "<group>"; };
 		E2718D512A25FADE00EE9F5A /* LoadResourcePresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresentationAdapter.swift; sourceTree = "<group>"; };
 		E2718D522A25FADE00EE9F5A /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIComposer.swift; sourceTree = "<group>"; };
@@ -140,8 +136,6 @@
 				E2AE12DC2A1F7AB30067F55A /* XCTestCase+FeedLoader.swift */,
 				E2AE12CE2A1E3F070067F55A /* SharedTestHelpers.swift */,
 				E2AE12DA2A1F72840067F55A /* FeedLoaderStub.swift */,
-				E217C9E52A24857F00383830 /* FeedImageDataLoaderSpy.swift */,
-				E217C9E72A24861000383830 /* XCTestCase+FeedImageDataLoader.swift */,
 				E287D6C22A26243700525E79 /* HTTPClientStub.swift */,
 				E287D6C42A26247300525E79 /* InMemoryFeedStore.swift */,
 				E2B6451B2A2A1D220084874B /* UIView+TestHelpers.swift */,
@@ -333,11 +327,9 @@
 				E2AE12CF2A1E3F070067F55A /* SharedTestHelpers.swift in Sources */,
 				E2044D902A174403002B7E34 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				E2718D642A25FC4500EE9F5A /* FeedUIIntegrationTests.swift in Sources */,
-				E217C9E62A24857F00383830 /* FeedImageDataLoaderSpy.swift in Sources */,
 				E2FB98BF2AD580E300AFD31B /* FeedImageCell+Helpers.swift in Sources */,
 				E287D6C32A26243700525E79 /* HTTPClientStub.swift in Sources */,
 				E2718D662A26031D00EE9F5A /* FeedAcceptanceTests.swift in Sources */,
-				E217C9E82A24861000383830 /* XCTestCase+FeedImageDataLoader.swift in Sources */,
 				E2718D502A25D3E800EE9F5A /* SceneDelegateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
